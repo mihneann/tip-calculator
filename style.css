@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.calculator {
+    max-width: 800px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    padding: 1.7rem;
+}
+
+.one {
+    flex: 1;
+}
+
+.two {
+    flex: 1;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 10px;
+}
+
+input:hover {
+    outline: 1px  solid hsl(172, 67%, 45%);
+    cursor: pointer;
+    outline-offset: 0;
+}
+
+input:focus {
+    outline: 1px solid hsl(172, 67%, 45%);
+    outline-offset: 0;
+}
+
+ #bill,
+ #people {
+     margin-top: 5px;
+     width: 100%;
+     text-align: right;
+     padding: 5px 0;
+     font-size: 24px;
+     font-weight: 700;
+     color: hsl(183, 100%, 15%);
+     margin-bottom: 20px;
+ }
+
+ #bill {
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: calc(10px);
+ }
+
+ #people {
+    background-image: url(images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: calc(10px);
+ }
+
+ label {
+     color: hsl(186, 14%, 43%);
+     font-size: 13px;
+ }
+
+ 
+
+ #error {
+    margin-left: 90px;
+    color: red;
+    display: none;
+ }
+
+ .tipBox {
+     margin-top: 5px;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 7px;
+     margin-bottom: 20px;
+ }
+
+ .tipBox p {
+     background-color: hsl(183, 100%, 15%);
+     color: hsl(0, 0%, 100%);
+     font-size: 30px;
+     text-align: center;
+     border-radius: 10px;
+ }
+
+
+
+ .tipBox input {
+     text-align: center;
+     color: hsl(183, 100%, 15%);
+     text-transform: uppercase;
+     font-weight: 700;
+     min-width: 100px;
+     font-size: 15px;
+ }
+
+ 
+
+ .tipBox p:hover {
+    cursor: pointer;
+    background-color: hsl(172, 67%, 45%);
+    transition: .5s;
+ }
+ 
+ .tipBox p:focus {
+    background-color: hsl(172, 67%, 45%);
+ }
+
+ .two {
+     background-color: hsl(183, 100%, 15%);
+     border-radius: 15px;
+     height: 350px;
+     padding: 0 20px;
+     width: 100%;
+ }
+
+ .total-amount,
+ .tip-amount {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 30px;
+ }
+
+ .text .main {
+     color: hsl(0, 0%, 100%);
+     font-size: .9rem;
+     margin-bottom: 10px;
+ }
+
+ .text .second {
+     color: hsl(184, 14%, 56%);
+     font-size: .7rem;
+ }
+
+ .priceBox {
+     font-size: 2.4rem;
+     color: hsl(172, 67%, 45%);
+ }
+
+ .two button {
+     margin-top:90px;
+     width: 100%;
+     padding: 10px 0;
+     margin-bottom: 300px;
+     border: none;
+     border-radius: 10px;
+     background-color: hsl(172, 67%, 45%);
+     text-transform: uppercase;
+     font-size: 1.1rem;
+ }
+
+ .two button:hover {
+    cursor: pointer;
+    transition: .6s;
+    transform: scale(1.05);
+ }
+
+
+@media (max-width:650px) {
+
+    .logo {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+    }
+    
+    .calculator {
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 15px;
+        height: max-content;
+        padding: 1.7rem;
+        flex-direction: column;
+    }
+
+    .one {
+        flex-grow: 0;
+    }
+
+    .two {
+        flex-grow: 0;
+    }
+
+    .two button {
+        margin: 30px 0;
+    }
+
+}
